@@ -1,1 +1,11 @@
-
+OrderID,Date,Product,Category,Region,Quantity,UnitPrice,Cost
+101,2026-01-01,Laptop,Electronics,South,2,50000,40000
+102,2026-01-02,Mobile,Electronics,North,5,20000,15000
+103,2026-01-03,Chair,Furniture,West,4,3000,2000
+104,2026-01-04,Table,Furniture,East,2,8000,5500
+105,2026-01-05,Headphones,Electronics,South,10,1500,900
+106,2026-01-06,Keyboard,Accessories,North,6,1200,700
+107,2026-01-07,Monitor,Electronics,West,3,12000,9000
+108,2026-01-08,Desk,Furniture,East,2,10000,7000
+109,2026-01-09,Mouse,Accessories,South,8,500,250
+110,2026-01-10,Printer,Electronics,North,2,15000,11000
