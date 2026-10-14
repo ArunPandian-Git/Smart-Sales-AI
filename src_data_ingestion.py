@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load sales data
-df = pd.read_csv("data/sales.csv")
+df = pd.read_csv("data_sales.csv")
 
 # Display the first five records
 print("First five records:")
