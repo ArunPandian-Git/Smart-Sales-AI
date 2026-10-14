@@ -1,1 +1,43 @@
+CREATE DATABASE smartsales;
+USE smartsales;
+CREATE TABLE sales (
+    OrderID INT PRIMARY KEY,
+    OrderDate DATE,
+    Product VARCHAR(100),
+    Category VARCHAR(100),
+    Region VARCHAR(50),
+    Quantity INT,
+    UnitPrice DECIMAL(12,2),
+    Cost DECIMAL(12,2),
+    Revenue DECIMAL(12,2),
+    Profit DECIMAL(12,2)
+);
 
+#Calculate total revenue
+SELECT SUM(Revenue) AS TotalRevenue
+FROM sales;
+
+#Find the best-selling product by revenue
+SELECT
+    Product,
+    SUM(Revenue) AS TotalRevenue
+FROM sales
+GROUP BY Product
+ORDER BY TotalRevenue DESC
+LIMIT 1;
+
+#Calculate profit by region
+SELECT
+    Region,
+    SUM(Profit) AS TotalProfit
+FROM sales
+GROUP BY Region
+ORDER BY TotalProfit DESC;
+
+#Find monthly sales
+SELECT
+    DATE_FORMAT(OrderDate, '%Y-%m') AS SalesMonth,
+    SUM(Revenue) AS MonthlyRevenue
+FROM sales
+GROUP BY DATE_FORMAT(OrderDate, '%Y-%m')
+ORDER BY SalesMonth;
